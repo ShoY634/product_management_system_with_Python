@@ -7,7 +7,7 @@ class Calculator:
     
     @classmethod
     def purchase_product(cls, purchase_list):
-        # ここらへん後で最適化したい。てかprintの中身がfstringsで書くとばぐって困る。なんで？
+        # ここらへん後で最適化の余地ありそう。ちょっと見にくい。
         product_purchased = purchase_list[0]["product"]
         product_purchased_quantity = purchase_list[0]["quantity"]
         product_purchased_price = int(product_purchased_quantity * product_purchased.price * 1.1)
