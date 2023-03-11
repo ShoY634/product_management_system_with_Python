@@ -8,13 +8,16 @@ class Calculator:
     @classmethod
     def purchase_product(cls, purchase_list):
         # ここらへん後で最適化の余地ありそう。ちょっと見にくい。
-        product_purchased = purchase_list[0]["product"]
+        # product_purchased = purchase_list[0]["product"]
+        for purchase in purchase_list:
+            product_purchased = purchase["product"]
         product_purchased_quantity = purchase_list[0]["quantity"]
         product_purchased_price = int(product_purchased_quantity * product_purchased.price * 1.1)
+        
 
         print(f"商品「{product_purchased.name}」を{str(product_purchased_quantity)}個購入しました。")
         
-        pc.stock -= purchase_list[0]["quantity"]
+        pc.stock = pc.stock - product_purchased_quantity
         
         print(f"料金は{product_purchased_price}円です。")
         
