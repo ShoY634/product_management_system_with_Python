@@ -7,7 +7,6 @@ class Calculator:
     
     @classmethod
     def purchase_product(cls, purchase_list):
-        # ここらへん後で最適化の余地ありそう。ちょっと見にくい。
         # product_purchased = purchase_list[0]["product"]
         for purchase in purchase_list:
             product_purchased = purchase["product"]
